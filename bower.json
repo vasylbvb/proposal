@@ -1,0 +1,30 @@
+{
+  "name": "proposal",
+  "description": "proposal in project",
+  "main": "index.js",
+  "authors": [
+    "Vasyl_BVB"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "relevante"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1",
+    "normalize-css": "^5.0.0",
+    "requirejs": "^2.3.2",
+    "font-awesome": "^4.7.0",
+    "scrollup": "^2.4.1"
+  }
+}
