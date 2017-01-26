@@ -1,0 +1,58 @@
+@import "_vars";
+@import "_fonts";
+
+.heading {
+  min-height: @header-height;
+  max-width: 100%;
+}
+
+.navglobal {
+  min-height: @header-height;
+  max-width: 100%;
+  margin: 0;
+  border: 0;
+}
+
+.forheader {
+  max-width: @main-width;
+  min-height: @header-height;
+  margin: 0 auto;
+  padding: 0;
+  &> .navigation-row {
+    display: block;
+    content: '';
+    max-width: 100%;
+    min-height: @header-height;
+    overflow: visible;
+  }
+  &> .after {
+    display: block;
+    content: '';
+    clear: both;
+  }
+}
+
+.navbar-header {
+  max-width: @logo-container-width;
+  min-height: @header-height;
+  padding: 0;
+}
+
+.logo-container {
+  display: block;
+  width: 100%;
+  min-height: @header-height;
+  padding: 0;
+  margin: 0 !important;
+  &:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 0;
+    vertical-align: middle;
+  }
+}
+.logo-img {
+  display: inline-block !important;
+  vertical-align: middle;
+}
