@@ -5,16 +5,16 @@
   padding: 0;
   display: block;
   content: "";
-  height: @violet-stripe-height;
+  min-height: @violet-stripe-height;
   background: @violet-stripe-color;
 }
 
 .first-line {
-  margin: -@violet-stripe-height auto 0;
+  margin: 0 auto;
   padding: 0;
   display: block;
   content: "";
-  height: @violet-stripe-height;
+  min-height: @violet-stripe-height;
   max-width: @main-width;
     & > h1 {
       margin: 30px 0 0 7px;
@@ -31,3 +31,46 @@
       text-align: left;
     }
   }
+
+.manage-team {
+  margin: 0;
+  min-height: 350px;
+  width: 100%;
+  & > .picture-manageteam {
+    padding: 0;
+    height: 350px;
+    & > img {
+      max-width: 100%;
+      height: inherit;
+    }
+  }
+  & > .sidebutton {
+    content: "";
+    padding: 0;
+    & > #connect {
+      margin: 30px 0 18px 50px;
+      max-width: 300px;
+      color: #ffffff;
+      font-family: "Bradley Hand ITC";
+      font-size: 14px;
+      -moz-transform: matrix( 0.99746355304888,-0.07117907233942,0.07117907233942,0.99746355304888,0,0);
+      -webkit-transform: matrix( 0.99746355304888,-0.07117907233942,0.07117907233942,0.99746355304888,0,0);
+      -ms-transform: matrix( 0.99746355304888,-0.07117907233942,0.07117907233942,0.99746355304888,0,0);
+      &:after {
+        display: inline-block;
+        content:"";
+        width: 38px;
+        height: 22px;
+        background: url("../images/arrow.png");
+        margin: -5px 0 0 5px;
+      }
+    }
+    & > #build {
+      margin: 20px 0 0 30px;
+      font-family: "Proxima Nova Light";
+      font-size: 16px;
+      color: #ffffff;
+    }
+  }
+}
+

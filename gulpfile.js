@@ -20,7 +20,7 @@ gulp.task("img", function(){
 gulp.task("fonts", function () {
     return gulp.src([
         "src/vendor/bootstrap/dist/fonts/*.*",
-        "src/fonts/*"
+        "src/fonts/**/*"
     ])
         .pipe(gulp.dest("dist/fonts"));
 });
