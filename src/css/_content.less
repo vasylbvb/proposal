@@ -27,6 +27,7 @@
   & > h3 {
     margin: 15px 0 30px 6px;
     font-size: 20px;
+    font-family: "Proxima Nova Light";
     color: #ffffff;
     text-align: left;
   }
@@ -191,37 +192,43 @@
   min-height: @grey-stripe-height;
   max-width: @main-width;
   color: #737c8b;
-  & > .why {
-    display: block;
-    height: 180px;
+  & > .whyrow {
+    margin: 0;
+    min-height: 180px;
     max-width: @main-width;
-    text-align: center;
-    text-transform: uppercase;
-    > h1 {
-      font-size: 36px;
-      font-weight: bold;
-      margin: 30px 0 0 0;
-    }
-    > h3 {
-      font-family: "Proxima Nova Light";
-      font-size: 20px;
-      margin: 20px 0 0 0;
+    & > .why {
+      display: block;
+      min-height: 180px;
+      max-width: @main-width;
+      padding: 0;
+      text-align: center;
+      text-transform: uppercase;
+      > h1 {
+        font-size: 36px;
+        font-weight: bold;
+        margin: 30px 0 0 0;
+      }
+      > h3 {
+        font-family: "Proxima Nova Light";
+        font-size: 20px;
+        margin: 20px 0 0 0;
+      }
     }
   }
 }
 
 .optionals {
   margin: 0;
-  height: 290px;
+  min-height: 290px;
 }
 
 .optional1,
 .optional2,
 .optional3 {
   padding: 0;
-  height: 100%;
+  min-height: 290px;
   & > div {
-    height: 130px;
+    min-height: 130px;
     position: relative;
     & > img {
       position: absolute;
@@ -241,18 +248,26 @@
     }
   }
 }
+
 .optional2 > div {
-    background: @grey-stripe-color; /* For browsers that do not support gradients */
-    background: -webkit-radial-gradient(circle, #ffffff, @grey-stripe-color); /* Safari */
-    background: -o-radial-gradient(circle, #ffffff, @grey-stripe-color); /* Opera 11.6 to 12.0 */
-    background: -moz-radial-gradient(circle, #ffffff, @grey-stripe-color); /* Firefox 3.6 to 15 */
-    background: radial-gradient(circle, #ffffff, @grey-stripe-color); /* Standard syntax */
+  background: @grey-stripe-color; /* For browsers that do not support gradients */
+  background: -webkit-radial-gradient(circle, #ffffff, @grey-stripe-color); /* Safari */
+  background: -o-radial-gradient(circle, #ffffff, @grey-stripe-color); /* Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(circle, #ffffff, @grey-stripe-color); /* Firefox 3.6 to 15 */
+  background: radial-gradient(circle, #ffffff, @grey-stripe-color); /* Standard syntax */
 }
-.centered-button {
-  height: 83px;
+
+.buttons-row {
+  margin: 0;
+  min-height: 83px;
   max-width: @main-width;
-  text-align: center;
-  & > .inbuild-btn {
-    margin: 0;
+  & > .centered-button {
+    min-height: 83px;
+    max-width: @main-width;
+    text-align: center;
+    padding: 0;
+    & > .inbuild-btn {
+      margin: 0;
+    }
   }
 }
