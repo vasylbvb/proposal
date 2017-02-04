@@ -108,7 +108,7 @@
         display: inline-block;
         vertical-align: middle;
         max-height: @white-stripe-height;
-        & > figcaption {
+        & > p {
           margin: 15px 0 0 35px;
           font-family: "Proxima Nova Light";
           font-size: 16px;
@@ -130,8 +130,8 @@
         vertical-align: middle;
         text-align: center;
         max-height: @white-stripe-height;
-        & > figcaption {
-          margin-top: 15px;
+        & > p {
+          margin: 15px 0 0 0;
           font-family: "Proxima Nova Light";
           font-size: 16px;
           color: @violet-stripe-color;
@@ -269,5 +269,90 @@
     & > .inbuild-btn {
       margin: 0;
     }
+  }
+}
+
+//4th line
+.fourth-line-backup {
+  display: block;
+  content: "";
+  min-height: 118px;
+  background: #ffffff;
+}
+
+.forcircles {
+  margin: 0 auto;
+  padding: 0;
+  display: block;
+  content: "";
+  height: 118px;
+  max-width: @main-width;
+}
+
+.for-circles {
+  margin: 0 auto;
+  height: 100%;
+  max-width: 75%;
+  position: relative;
+  & > .passive-circles {
+    list-style-type: none;
+    width: 100%;
+    height: 50px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    & > li {
+      height: 50px;
+      width: 50px;
+      & > .circle {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        border: solid 10px @circled-ul-color;
+        border-radius: 50%;
+        background: #ffffff;
+        position: relative;
+        & > div {
+          display: inline-block;
+          width: 16px;
+          height: 16px;
+          background: @circled-ul-color;
+          border-radius: 50%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin: -8px 0 0 -8px;
+        }
+      }
+    }
+    & > li:hover > :after {
+      display: block;
+      content: "";
+      height: 104px;
+      width: 104px;
+      border: solid 20px @circled-ul-color;
+      border-radius: 50%;
+      background: white;
+      background-image: url("../images/check_pic.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -52px 0 0 -52px;
+    }
+  }
+  &:before {
+    display: block;
+    content: "";
+    height: 12px;
+    width: 98%;
+    position: absolute;
+    top: 50%;
+    margin: -6px 0 0 2px;
+    background: @circled-ul-color;
   }
 }
