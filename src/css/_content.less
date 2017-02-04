@@ -1,6 +1,6 @@
 @import "_vars";
 @import "_fonts";
-
+//1st line
 .violet-backup {
   padding: 0;
   display: block;
@@ -16,21 +16,21 @@
   content: "";
   min-height: @violet-stripe-height;
   max-width: @main-width;
-    & > h1 {
-      margin: 30px 0 0 7px;
-      font-size: 36px;
-      color: #ffffff;
-      font-weight: bold;
-      text-transform: uppercase;
-      text-align: left;
-    }
-    & > h3 {
-      margin: 15px 0 30px 6px;
-      font-size: 20px;
-      color: #ffffff;
-      text-align: left;
-    }
+  & > h1 {
+    margin: 30px 0 0 7px;
+    font-size: 36px;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: left;
   }
+  & > h3 {
+    margin: 15px 0 30px 6px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: left;
+  }
+}
 
 .manage-team {
   margin: 0;
@@ -53,12 +53,12 @@
       color: #ffffff;
       font-family: "Bradley Hand ITC";
       font-size: 14px;
-      -moz-transform: matrix( 0.99746355304888,-0.07117907233942,0.07117907233942,0.99746355304888,0,0);
-      -webkit-transform: matrix( 0.99746355304888,-0.07117907233942,0.07117907233942,0.99746355304888,0,0);
-      -ms-transform: matrix( 0.99746355304888,-0.07117907233942,0.07117907233942,0.99746355304888,0,0);
+      -moz-transform: matrix(0.99746355304888, -0.07117907233942, 0.07117907233942, 0.99746355304888, 0, 0);
+      -webkit-transform: matrix(0.99746355304888, -0.07117907233942, 0.07117907233942, 0.99746355304888, 0, 0);
+      -ms-transform: matrix(0.99746355304888, -0.07117907233942, 0.07117907233942, 0.99746355304888, 0, 0);
       &:after {
         display: inline-block;
-        content:"";
+        content: "";
         width: 38px;
         height: 22px;
         background: url("../images/arrow.png");
@@ -73,4 +73,108 @@
     }
   }
 }
+
+//2nd line
+.white-backup {
+  display: block;
+  content: "";
+  min-height: @white-stripe-height;
+  background: #ffffff;
+}
+
+.second-line {
+  margin: 0 auto;
+  padding: 0;
+  display: block;
+  content: "";
+  min-height: @white-stripe-height;
+  max-width: @main-width;
+  & > .features {
+    margin: 0;
+    min-height: @white-stripe-height;
+    max-width: @main-width;
+
+    & > .anyscreen {
+      padding: 0;
+      height: @white-stripe-height;
+      &:before {
+        display: inline-block;
+        content: "";
+        height: 100%;
+        vertical-align: middle;
+      }
+      & > .inside-anyscreen {
+        display: inline-block;
+        vertical-align: middle;
+        max-height: @white-stripe-height;
+        & > figcaption {
+          margin: 15px 0 0 35px;
+          font-family: "Proxima Nova Light";
+          font-size: 16px;
+          color: @violet-stripe-color;
+        }
+      }
+    }
+    & > .secure {
+      padding: 0;
+      height: @white-stripe-height;
+      &:before {
+        display: inline-block;
+        content: "";
+        height: 100%;
+        vertical-align: middle;
+      }
+      & > .inside-secure {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        max-height: @white-stripe-height;
+        & > figcaption {
+          margin-top: 15px;
+          font-family: "Proxima Nova Light";
+          font-size: 16px;
+          color: @violet-stripe-color;
+        }
+      }
+    }
+    & > .checks {
+      padding: 0;
+      height: @white-stripe-height;
+      &:before {
+        display: inline-block;
+        content: "";
+        height: 100%;
+        vertical-align: middle;
+      }
+      & > ul {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 0 0 27px;
+        width: 90%;
+        max-height: @white-stripe-height;
+        list-style-image: url("../images/checkbox_pic.png");
+        & > li {
+          height: 20px;
+          margin-bottom: 25px;
+          position: relative;
+          & > div {
+            font-family: "Proxima Nova Light";
+            font-size: 16px;
+            height: 20px;
+            color: @violet-stripe-color;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+        & > .lastone {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+//3rd line
+
 
