@@ -363,7 +363,7 @@
   }
 }
 
-//4th line
+//5th line
 .fifth-line {
   margin: 0 auto;
   padding: 0;
@@ -404,7 +404,7 @@
       position: relative;
       & > img {
         position: absolute;
-        left:0;
+        left: 0;
         bottom: -15px;
         max-width: 100%;
         max-height: 100%;
@@ -424,5 +424,55 @@
         color: #ffffff;
       }
     }
+  }
+}
+
+//6th line
+.sixth-line-backup {
+  display: block;
+  content: "";
+  min-height: 205px;
+  background: #ffffff;
+}
+
+.sixth-line {
+  margin: 0 auto;
+  padding: 0;
+  display: block;
+  content: "";
+  min-height: 205px;
+  max-width: @main-width;
+}
+
+.faqrow {
+  margin: 0;
+  min-height: 205px;
+  max-width: @main-width;
+}
+
+.faq1, .faq2, .faq3 {
+  min-height: 125px;
+  padding: 0 60px 0 0;
+  margin-top: 80px;
+  color: #737c8b;
+  text-align: center;
+  font-family: "Proxima Nova Light";
+  font-size: 16px;
+  & > h5 {
+    margin: 0 0 20px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  & > p {
+    margin: 0;
+  }
+}
+#lastfaq {
+  padding-right: 0;
+}
+
+@media (max-width: 480px) {
+  .faq1, .faq2, .faq3 {
+    padding: 0;
   }
 }
