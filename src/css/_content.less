@@ -478,7 +478,7 @@
   }
 }
 
-//6th line
+//7th line
 .seventh-line-backup {
   display: block;
   content: "";
@@ -537,5 +537,38 @@
     margin: 0;
     text-align: right;
     padding-right: 30px;
+  }
+}
+
+//8th line
+.eighth-line-backup {
+  display: block;
+  content: "";
+  min-height: 50px;
+  background: #ffffff;
+}
+
+.eighth-line {
+  margin: 0 auto;
+  padding: 0;
+  display: block;
+  content: "";
+  min-height: 50px;
+  max-width: @main-width;
+  & > p {
+    margin: 0;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 24px;
+    color: #737c8b;
+    &:before {
+      display: inline-block;
+      content: "";
+      min-height: 50px;
+      vertical-align: middle;
+
+    }
   }
 }
