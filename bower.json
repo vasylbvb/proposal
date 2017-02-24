@@ -25,6 +25,7 @@
     "normalize-css": "^5.0.0",
     "requirejs": "^2.3.2",
     "font-awesome": "^4.7.0",
-    "scrollup": "^2.4.1"
+    "scrollup": "^2.4.1",
+    "slick-carousel": "^1.6.0"
   }
 }

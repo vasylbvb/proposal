@@ -13,14 +13,19 @@ gulp.task("html", function(){
 });
 
 gulp.task("img", function(){
-    return gulp.src("src/images/*")
+    return gulp.src([
+        "src/images/*",
+        "src/vendor/slick-carousel/slick/*.gif"
+    ])
         .pipe(gulp.dest("dist/images"));
 });
 
 gulp.task("fonts", function () {
     return gulp.src([
         "src/vendor/bootstrap/dist/fonts/*.*",
+        "src/vendor/slick-carousel/slick/fonts/*.*",
         "src/fonts/**/*"
+
     ])
         .pipe(gulp.dest("dist/fonts"));
 });
@@ -28,14 +33,22 @@ gulp.task("fonts", function () {
 gulp.task("vendor-css", function(){
     return gulp.src([
         "src/vendor/bootstrap/dist/css/bootstrap.css",
-        "src/vendor/jGrowl/jquery.jgrowl.css"
+        "src/vendor/jGrowl/jquery.jgrowl.css",
+        "src/vendor/slick-carousel/slick/slick.css",
+        "src/vendor/slick-carousel/slick/slick-theme.css"
     ])
         .pipe(concat("bootstrap.css"))
         .pipe(nano())
         .pipe(gulp.dest("dist/css"));
 });
+gulp.task("css:all", ["css", "vendor-css"]);
 
 gulp.task("css", function(){
+    gulp.src("src/css/slick-theme.less")
+        .pipe(less())
+        .pipe(nano())
+        .pipe(gulp.dest("src/vendor/slick-carousel/slick"))
+
     return gulp.src("src/css/main.less")
         .pipe(less())
         .pipe(nano())
@@ -47,7 +60,8 @@ gulp.task("vendor-js", function(){
     return gulp.src([
         "src/vendor/bootstrap/dist/js/bootstrap.js",
         "src/vendor/jGrowl/jquery.jgrowl.js",
-        "src/vendor/scrollup/dist/jquery.scrollUp.js"
+        "src/vendor/scrollup/dist/jquery.scrollUp.js",
+        "src/vendor/slick-carousel/slick/slick.js"
     ])
         .pipe(addSrc.prepend("src/vendor/jquery/dist/jquery.js"))
         .pipe(concat("vendor.min.js"))
@@ -77,4 +91,4 @@ gulp.task("watch", function(){
     gulp.watch("src/**/*.html").on("change", browserSync.reload);
 });
 
-gulp.task("default", ["html", "img", "fonts", "vendor-css", "css", "vendor-js", "app-js", "jqueryjs", "watch"]);
+gulp.task("default", ["html", "img", "fonts", "css:all", "vendor-js", "app-js", "jqueryjs", "watch"]);
