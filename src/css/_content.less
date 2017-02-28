@@ -513,6 +513,7 @@
     text-align: center;
     & > img {
       display: inline-block;
+      border-radius: 50%;
     }
   }
   & > cite {
@@ -582,7 +583,6 @@
   content: "";
   min-height: 321px;
   max-width: @main-width;
-  overflow-x: auto;
 }
 
 .client1,
@@ -650,4 +650,98 @@
 .usercases-slider {
   height: 276px;
   width: 100%;
+}
+
+//11th line
+.blog-backup {
+  display: block;
+  content: "";
+  min-height: 547px;
+  background: @grey-stripe-color;
+}
+
+.eleventh-line-blog {
+  margin: 0 auto;
+  padding: 0;
+  display: block;
+  content: "";
+  min-height: 547px;
+  max-width: @main-width;
+  & > .readblog {
+    height: 100px;
+    max-width: @main-width;
+    text-align: center;
+    border-bottom: solid 1px #c8cdd4;
+    > p {
+      margin: 0;
+      display: inline-block;
+      font-size: 24px;
+      color: #737c8b;
+      vertical-align: middle;
+      &:before {
+        display: inline-block;
+        content: "";
+        height: 100px;
+        vertical-align: middle;
+      }
+      & > a {
+        text-decoration: none;
+        color: #cc99ff;
+        &:before {
+          display: inline-block;
+          content: "";
+          width: 24px;
+          height: 2px;
+          background: #9299a5;
+          vertical-align: middle;
+          margin-right: 6px;
+        }
+      }
+    }
+  }
+}
+.blog-content {
+  min-height: 446px;
+  max-width: @main-width;
+  padding-top: 70px;
+}
+.first-blog-line,
+.second-blog-line {
+  margin: 0;
+  & > div[class^="blog-block"] {
+    padding: 0 25px 0 0;
+    min-height: 223px;
+    & > .blog-pic-block {
+      padding-left: 5px;
+      width: 19%;
+      float: left;
+      & > img {
+        border-radius: 50%;
+      }
+    }
+    & > .blog-text-block {
+      width: 81%;
+      float: left;
+      font-family: "Proxima Nova Light";
+      & > h3 {
+        color: #a67ad1;
+      }
+      & > hr {
+        margin: 0 0 10px;
+      }
+      & > p {
+        font-size: 14px;
+        color: #737c8b;
+      }
+    }
+  }
+}
+//finish line
+.finish-backup {
+  display: block;
+  content: "";
+  height: 222px;
+  width: 100%;
+  background: #ffffff;
+  padding-bottom: 204px;
 }
